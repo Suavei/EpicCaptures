@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Epic Captures</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About/Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="image-slider">
+        <div class="slider">
+          <img
+            class="mySlides"
+            src="slider/img1.jpg"
+          />
+          <img
+            class="mySlides"
+            src="slider/img2.jpg"
+          />
+          <img
+            class="mySlides"
+            src="slider/img3.jpg"
+          />
+          <img
+            class="mySlides"
+            src="slider/img4.jpg"
+          />
+          <img
+            class="mySlides"
+            src="slider/img5.jpg"
+          />
+        </div>
+
+        <script>
+          var myIndex = 0;
+          carousel();
+
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+              myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 3 seconds
+          }
+        </script>
+      </section>
+
+      <section class="content-container">
+        <div class="text-container">
+          <p>
+            <strong>Wanderlustin'</strong> admist the
+            <strong><em>CHAOS</em></strong
+            ><br />
+            shown here.
+          </p>
+        </div>
+        <div class="image-container">
+          <img src="layered images\girl.jpg" alt="Right Image" />
+        </div>
+      </section>
+
+      <section class="layered-images">
+        <img id="img1" src="layered images\parrot.jpg" alt="Image A" />
+        <img id="img2" src="layered images\tree.jpg" alt="Image B" />
+        <img id="img3" src="layered images\ziraf.jpg" alt="Image C" />
+        <div id="cap">CREATIVE</div>
+      </section>
+
+      <p class="simple-text">Reach out here, w'd love to hear to you :)</p>
+
+      <div class="buttons-container">
+        <button>
+          <a
+            href="https://www.instagram.com/wildcosmo.s?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            >INSTAGRAM</a
+          >
+        </button>
+        <button><a href="vksoniofficial@gmail.com">E-MAIL</a></button>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; Copyright 2024</p>
+    </footer>
+  </body>
+</html>
